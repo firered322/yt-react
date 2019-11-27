@@ -1,7 +1,22 @@
 import React from "react";
+import "./VideoFile.css";
 
 const VideoFile = props => {
-  return <h1>{props.video.snippet.title}</h1>;
+  return (
+    <div
+      onClick={() => props.onVideoSelect(props.video)}
+      className="video-item item"
+    >
+      <img
+        className="ui image"
+        src={props.video.snippet.thumbnails.medium.url}
+        alt=""
+      />
+      <div className="content">
+        <div className="header">{props.video.snippet.title}</div>
+      </div>
+    </div>
+  );
 };
 
 export default VideoFile;

@@ -3,9 +3,9 @@ import VideoFile from "./VideoFile";
 
 const VideoList = props => {
   const renderedVideoList = props.videos.map(video => {
-    return <VideoFile video={video} />;
+    return <VideoFile onVideoSelect={props.onVideoSelect} video={video} />;
   });
-  return <div>{renderedVideoList}</div>;
+  return <div className="ui relaxed divided list">{renderedVideoList}</div>;
 };
 
 export default VideoList;
