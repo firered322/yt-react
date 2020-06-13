@@ -1,8 +1,8 @@
 import React from "react";
 import VideoFile from "./VideoFile";
 
-const VideoList = props => {
-  const renderedVideoList = props.videos.map(video => {
+const VideoList = (props) => {
+  const renderedVideoList = props.videos.map((video) => {
     return (
       <VideoFile
         key={video.id.videoId}

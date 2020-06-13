@@ -2,19 +2,17 @@ import React from "react";
 
 class SearchBar extends React.Component {
   state = {
-    searchTerm: ""
+    searchTerm: "",
   };
 
-  onInputChange = event => {
+  onInputChange = (event) => {
     this.setState({
-      searchTerm: event.target.value
+      searchTerm: event.target.value,
     });
   };
-  onFormSubmit = event => {
-    // preventDefault() prevents auto page reload on form submission.
+  onFormSubmit = (event) => {
     event.preventDefault();
-    // TODO: Remember to call the callback from
-    // the parent to ensure successful submission.
+
     this.props.onFormSubmit(this.state.searchTerm);
   };
   render() {
